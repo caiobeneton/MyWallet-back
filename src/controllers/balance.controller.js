@@ -21,9 +21,9 @@ export async function getBalance(req, res) {
 
 export async function inputBalance(req, res) {
     const { description, value, type } = req.body
-    const {authorization} = req.headers
+    const {Authorization} = req.headers
 
-    const token = authorization?.replace("Bearer ", "");
+    const token = Authorization?.replace("Bearer ", "");
     if (!token) {
         return res.sendStatus(401);
     }
