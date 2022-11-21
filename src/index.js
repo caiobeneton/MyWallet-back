@@ -1,6 +1,5 @@
 import express, { json } from "express"
 import cors from "cors"
-import joi from "joi"
 import dotenv from "dotenv"
 import userRoutes from "./routes/user.routes.js"
 import balanceRoutes from "./routes/balance.routes.js"
