@@ -1,4 +1,4 @@
-import { balanceCollection, sessionsCollection, usersCollection } from "../database/db";
+import { balanceCollection, sessionsCollection, usersCollection } from "../database/db.js";
 
 export async function getBalance(req, res) {
     const { authorization } = req.headers;
@@ -29,7 +29,8 @@ export async function inputBalance(req, res) {
     }
 
     try {
-        const sessions = await sessionsCollection.findOne({ token })
+        const sessions = await sessionsCollection.findOne({token})
+
         const user = await usersCollection.findOne({ _id: sessions.userId })
 
         const newInput = {
@@ -43,5 +44,6 @@ export async function inputBalance(req, res) {
         res.sendStatus(201)
     } catch (error) {
         res.sendStatus(500);
+        console.log(error)
     }
 }

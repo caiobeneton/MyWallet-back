@@ -5,7 +5,7 @@ import { signInBodyValidation } from "../middlewares/authUserLogin.middleware.js
 
 const router = Router()
 
-router.post("/signUp", signUpBodyValidation, signUp)
-router.post("/signIn", signInBodyValidation, signIn)
+router.post("/signup", signUpBodyValidation, signUp)
+router.post("/signin", signInBodyValidation, signIn)
 
 export default router

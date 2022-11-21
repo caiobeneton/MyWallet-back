@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { getBalance, inputBalace } from "../controllers/balance.controller";
+import { getBalance, inputBalance } from "../controllers/balance.controller.js";
 
 const router = Router()
 
 router.get("/balance", getBalance)
-router.post("/balance", inputBalace)
+router.post("/balance", inputBalance)
 
 export default router

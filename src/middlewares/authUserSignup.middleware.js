@@ -1,5 +1,5 @@
-import { usersSchema } from "../models/users.models";
-import { usersCollection } from "../database/db";
+import { usersSchema } from "../models/users.models.js";
+import { usersCollection } from "../database/db.js";
 
 
 export async function signUpBodyValidation(req, res, next) {

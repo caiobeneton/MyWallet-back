@@ -1,4 +1,4 @@
-import { usersCollection } from "../database/db";
+import { usersCollection } from "../database/db.js";
 import bcrypt from "bcrypt"
 
 export async function signInBodyValidation(req, res, next) {
